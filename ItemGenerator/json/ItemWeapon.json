@@ -1,0 +1,44 @@
+[
+  {
+    "Id": "바스타드소드",
+    "Min": 1,
+    "Max": 11,
+    "AttackSpeed": 1.2
+  },
+  {
+    "Id": "숏소드",
+    "Min": 1,
+    "Max": 5,
+    "AttackSpeed": 0.8
+  },
+  {
+    "Id": "브로드소드",
+    "Min": 2,
+    "Max": 6,
+    "AttackSpeed": 1.1
+  },
+  {
+    "Id": "롱소드",
+    "Min": 2,
+    "Max": 12,
+    "AttackSpeed": 1
+  },
+  {
+    "Id": "양손검",
+    "Min": 1,
+    "Max": 24,
+    "AttackSpeed": 0.9
+  },
+  {
+    "Id": "토르의_검",
+    "Min": 10,
+    "Max": 16,
+    "AttackSpeed": 1
+  },
+  {
+    "Id": "로키의_창",
+    "Min": 14,
+    "Max": 26,
+    "AttackSpeed": 0.9
+  }
+]

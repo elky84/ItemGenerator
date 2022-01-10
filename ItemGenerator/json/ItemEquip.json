@@ -1,0 +1,30 @@
+[
+  {
+    "Id": "둥근나무방패",
+    "ArmorClass": 2
+  },
+  {
+    "Id": "장갑",
+    "ArmorClass": 0
+  },
+  {
+    "Id": "부츠",
+    "ArmorClass": 2
+  },
+  {
+    "Id": "판금갑옷",
+    "ArmorClass": 7
+  },
+  {
+    "Id": "발키리의_장갑",
+    "ArmorClass": 3
+  },
+  {
+    "Id": "오딘의_갑옷",
+    "ArmorClass": 10
+  },
+  {
+    "Id": "스쿨드의_신발",
+    "ArmorClass": 3
+  }
+]

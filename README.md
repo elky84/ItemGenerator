@@ -11,3 +11,15 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/elky84/item-generator.svg)
 
 # item-generator
+
+랜덤 아이템 생성기입니다.
+
+정의된 데이터 (엑셀 기반. excel 폴더내에 배치) 기반으로, 아이템을 생성해 콘솔 출력해줍니다.
+
+현재 구현은 정의된 확률에 따라 아이템 타입을 결정짓고, 아이템 등급을 결정 지은 뒤, 해당 등급에 맞는 아이템, 등급에 맞는 옵션을 임의로 골라 부여합니다.
+
+## Execute CLI options (execute build file)
+
+### Count (-n)
+
+`Cli -n 10000`

@@ -1,0 +1,32 @@
+[
+  {
+    "Id": "빨간포션(소형)",
+    "PotionType": "체력회복",
+    "Value": 30,
+    "Time": 0
+  },
+  {
+    "Id": "빨간포션(중형)",
+    "PotionType": "체력회복",
+    "Value": 100,
+    "Time": 0
+  },
+  {
+    "Id": "빨간포션(대형)",
+    "PotionType": "체력회복",
+    "Value": 250,
+    "Time": 0
+  },
+  {
+    "Id": "초록포션",
+    "PotionType": "해독",
+    "Value": 0,
+    "Time": 0
+  },
+  {
+    "Id": "파랑포션",
+    "PotionType": "마나회복",
+    "Value": 200,
+    "Time": 0
+  }
+]

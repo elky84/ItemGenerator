@@ -1,0 +1,27 @@
+[
+  {
+    "Id": "장비",
+    "Type": "장비",
+    "Probability": 20
+  },
+  {
+    "Id": "무기",
+    "Type": "무기",
+    "Probability": 20
+  },
+  {
+    "Id": "골드",
+    "Type": "골드",
+    "Probability": 40
+  },
+  {
+    "Id": "포션",
+    "Type": "포션",
+    "Probability": 10
+  },
+  {
+    "Id": "두루마리",
+    "Type": "두루마리",
+    "Probability": 10
+  }
+]

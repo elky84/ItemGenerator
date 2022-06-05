@@ -9,8 +9,6 @@ namespace ItemGenerator.MasterData
 {
 	public partial class ItemOption
 	{
-        public string? Id { get; set; }
-
         [JsonConverter(typeof(JsonEnumConverter<GradeType>))]
         public GradeType Grade { get; set; }
 
@@ -21,7 +19,7 @@ namespace ItemGenerator.MasterData
 
         public float ValueMax { get; set; }
 
-        public string? Level { get; set; }
+        public int? Level { get; set; }
 
         [JsonConverter(typeof(JsonEnumsConverter<ItemSlotType>))]
         public List<ItemSlotType>? SlotLimit { get; set; }

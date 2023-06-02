@@ -2,6 +2,7 @@
 
 namespace Cli
 {
+    // ReSharper disable once ClassNeverInstantiated.Global
     public partial class Options
     {
         [Option('n', "count", Required = false, HelpText = "execute count")]

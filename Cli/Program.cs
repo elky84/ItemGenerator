@@ -12,11 +12,11 @@ try
         .CreateLogger();
 
     Parser.Default.ParseArguments<Options>(args)
-        .WithParsed<Options>(opts => Generator.Execute(opts))
-        .WithNotParsed<Options>((errs) => Options.HandleParseError(errs));
+        .WithParsed<Options>(Generator.Execute)
+        .WithNotParsed<Options>(Options.HandleParseError);
 }
 catch (Exception exception)
 {
-    Log.Information($"Unhandled exception. <Reason:{exception.Message}> <StackTrace:{exception.StackTrace}>");
+    Log.Information("Unhandled exception. <Reason:{ExceptionMessage}> <StackTrace:{ExceptionStackTrace}>", exception.Message, exception.StackTrace);
     Log.CloseAndFlush();
 }

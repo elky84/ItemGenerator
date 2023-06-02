@@ -9,7 +9,7 @@ namespace Cli
 {
     public static class Generator
     {
-        public static readonly RandomUtil RandomUtil = new();
+        private static readonly RandomUtil RandomUtil = new();
 
         public static void Execute(Options opts)
         {
@@ -29,7 +29,7 @@ namespace Cli
             Log.Information($"Generate Completed");
         }
 
-        public static ItemGenerator.Model.Item? Generate(Options opts)
+        private static ItemGenerator.Model.Item? Generate(Options opts)
         {
             var itemDrop = Drop();
             if(itemDrop == null)
@@ -49,7 +49,7 @@ namespace Cli
             var itemMasterData = Pick(opts.Level, itemDrop);
             if(itemMasterData == null)
             {
-                Log.Error($"Item Pick failed. <Level:{opts.Level}, Drop:{itemDrop}>");
+                Log.Error("Item Pick failed. <Level:{OptsLevel}, Drop:{ItemDrop}>", opts.Level, itemDrop);
                 return null;
             }
 
@@ -68,7 +68,7 @@ namespace Cli
             return item;
         }
 
-        public static ItemDrop? Drop()
+        private static ItemDrop? Drop()
         {
             double n = RandomUtil.Next(0.0, 100.0), check = 0.0;
             foreach (var itemDrop in MasterTable.From<TableItemDrop>()!)
@@ -83,7 +83,7 @@ namespace Cli
             return null;
         }
 
-        public static ItemDropGrade? DropGrade()
+        private static ItemDropGrade? DropGrade()
         {
             double n = RandomUtil.Next(0.0, 100.0), check = 0.0;
             foreach (var itemDropGrade in MasterTable.From<TableItemDropGrade>()!)
@@ -98,36 +98,35 @@ namespace Cli
             return null;
         }
 
-        public static Item? Pick(int level, ItemDrop itemDrop)
+        private static Item? Pick(int level, ItemDrop itemDrop)
         {
             var itemByType = MasterTable.From<TableItemByType>()![itemDrop.Type];
 
             var item = RandomUtil.Pick(itemByType);
-            if(item == null)
-            {
-                Log.Error($"Not found ItemMasterData. <Level:{level}, Drop:{itemDrop.Type}>");
-                return null;
-            }
+            if (item != null) return item;
+            
+            Log.Error("Not found ItemMasterData. <Level:{Level}, Drop:{ItemDropType}>", level, itemDrop.Type);
+            return null;
 
-            return item;
         }
 
-        public static ItemGenerator.Model.ItemOption? PickOption(int level, Item item, ItemDropGrade itemDropGrade)
+        private static ItemGenerator.Model.ItemOption? PickOption(int level, Item item, ItemDropGrade itemDropGrade)
         {
             var itemOptionByGrade = MasterTable.From<TableItemOptionByGrade>()![itemDropGrade.Grade];
 
             var itemOption = RandomUtil.Pick(itemOptionByGrade);
-            if (itemOption == null)
+            if (itemOption != null)
             {
-                Log.Error($"Not found option. <Level:{level}, Drop:{itemDropGrade.Grade}>");
-                return null;
+                return new ItemGenerator.Model.ItemOption
+                {
+                    Type = itemOption.Option,
+                    Value = RandomUtil.Next(itemOption.ValueMin, itemOption.ValueMax)
+                };
             }
+            
+            Log.Error("Not found option. <Level:{Level}, Drop:{Grade}>", level, itemDropGrade.Grade);
+            return null;
 
-            return new ItemGenerator.Model.ItemOption
-            {
-                Type = itemOption.Option,
-                Value = RandomUtil.Next(itemOption.ValueMin, itemOption.ValueMax)
-            };
         }
     }
 }

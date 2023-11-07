@@ -15,10 +15,10 @@ namespace Cli
         {
             MasterTable.Load("ItemGenerator.Table");
 
-            for(var n = 1; n <= opts.Count; ++n)
+            for (var n = 1; n <= opts.Count; ++n)
             {
                 var item = Generate(opts);
-                if(item != null)
+                if (item != null)
                 {
                     Log.Information($"[Generated Item] <Item:{item.ItemId}, Grade:{item.Grade.Desc()}, " +
                         $"Type:{item.MasterData!.Type.Desc()}, " +
@@ -32,7 +32,7 @@ namespace Cli
         private static ItemGenerator.Model.Item? Generate(Options opts)
         {
             var itemDrop = Drop();
-            if(itemDrop == null)
+            if (itemDrop == null)
             {
                 Log.Error($"ItemDrop is null. Maybe reason is Code or MasterData");
                 return null;
@@ -47,7 +47,7 @@ namespace Cli
 
 
             var itemMasterData = Pick(opts.Level, itemDrop);
-            if(itemMasterData == null)
+            if (itemMasterData == null)
             {
                 Log.Error("Item Pick failed. <Level:{OptsLevel}, Drop:{ItemDrop}>", opts.Level, itemDrop);
                 return null;
@@ -74,7 +74,7 @@ namespace Cli
             foreach (var itemDrop in MasterTable.From<TableItemDrop>()!)
             {
                 check += itemDrop.Probability;
-                if ( n <= check)
+                if (n <= check)
                 {
                     return itemDrop;
                 }
@@ -104,7 +104,7 @@ namespace Cli
 
             var item = RandomUtil.Pick(itemByType);
             if (item != null) return item;
-            
+
             Log.Error("Not found ItemMasterData. <Level:{Level}, Drop:{ItemDropType}>", level, itemDrop.Type);
             return null;
 
@@ -123,7 +123,7 @@ namespace Cli
                     Value = RandomUtil.Next(itemOption.ValueMin, itemOption.ValueMax)
                 };
             }
-            
+
             Log.Error("Not found option. <Level:{Level}, Drop:{Grade}>", level, itemDropGrade.Grade);
             return null;
 

@@ -1,5 +1,5 @@
 [![Website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?label=elky-essay)](https://elky84.github.io)
-![Made with](https://img.shields.io/badge/made%20with-.NET6-blue.svg)
+![Made with](https://img.shields.io/badge/made%20with-.NET8-blue.svg)
 
 ![GitHub forks](https://img.shields.io/github/forks/elky84/item-generator.svg?style=social&label=Fork)
 ![GitHub stars](https://img.shields.io/github/stars/elky84/item-generator.svg?style=social&label=Stars)
@@ -20,7 +20,7 @@
 
 ## required
 
-* [dotnet 6 rumtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+* [dotnet 8 rumtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 * [ExcelToDotNet](https://github.com/elky84/ExcelToDotNet)
   * `dotnet tool install -g ExcelCli`
 

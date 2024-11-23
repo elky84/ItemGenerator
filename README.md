@@ -20,7 +20,7 @@
 
 ## required
 
-* [dotnet 8 rumtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+* [dotnet 9 rumtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
 * [ExcelToDotNet](https://github.com/elky84/ExcelToDotNet)
   * `dotnet tool install -g ExcelCli`
 

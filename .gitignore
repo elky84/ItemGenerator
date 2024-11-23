@@ -352,3 +352,5 @@ MigrationBackup/
 output/
 
 *.temp
+
+.idea/

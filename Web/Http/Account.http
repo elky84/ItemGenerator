@@ -1,0 +1,14 @@
+﻿### GuestSignIn
+POST {{gameserver}}/api/Account/GuestSignIn
+Content-Type: application/json
+
+{
+    "accountId": "elky",
+    "deviceId": "string",
+    "adId": "string"
+}
+
+> {%
+    client.global.set("auth_token", response.body.authorizationToken);
+%}
+

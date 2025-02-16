@@ -7,11 +7,12 @@ using ItemGenerator.Types;
 
 namespace ItemGenerator.MasterData
 {
-	public partial class ItemEquip
+	public partial class ItemSlot
 	{
 	
-		public string? Id { get; set; }
+		[JsonConverter(typeof(JsonEnumConverter<ItemSlotType>))]
+		public ItemSlotType Id { get; set; }
 		
-		public int ArmorClass { get; set; }
+		public int Slot { get; set; }
 	}
 }

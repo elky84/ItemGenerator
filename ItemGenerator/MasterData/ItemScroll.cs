@@ -9,14 +9,14 @@ namespace ItemGenerator.MasterData
 {
 	public partial class ItemScroll
 	{
-        public string? Id { get; set; }
-
-        [JsonConverter(typeof(JsonEnumConverter<ItemScrollEffectType>))]
-        public ItemScrollEffectType EffectType { get; set; }
-
-        public int Min { get; set; }
-
-        public int Max { get; set; }
-
+	
+		public string? Id { get; set; }
+		
+		[JsonConverter(typeof(JsonEnumConverter<ItemScrollEffectType>))]
+		public ItemScrollEffectType EffectType { get; set; }
+		
+		public int Min { get; set; }
+		
+		public int Max { get; set; }
 	}
 }

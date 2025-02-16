@@ -20,9 +20,9 @@ namespace Cli
                 var item = Generate(opts);
                 if (item != null)
                 {
-                    Log.Information($"[Generated Item] <Item:{item.ItemId}, Grade:{item.Grade.Desc()}, " +
-                        $"Type:{item.MasterData!.Type.Desc()}, " +
-                        $"Options:[{String.Join(",", item.Options!)}]>");
+                    Log.Information($"[Generated Item] Item:{item.ItemId}, Grade:{item.Grade.Desc()}, " +
+                        $"Type:{item.MasterData!.Type.Desc()}\n" +
+                        $"Options:[{String.Join(",", item.Options!)}]");
                 }
             }
 

@@ -18,6 +18,6 @@
 
   <ItemGroup>
     <PackageReference Include="EnumExtend" Version="1.0.8" />
-    <PackageReference Include="JsonTable" Version="1.0.14" />
+    <PackageReference Include="JsonTable" Version="1.0.15" />
   </ItemGroup>
 </Project>

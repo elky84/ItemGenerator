@@ -12,9 +12,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="AntDesign" Version="1.0.0" />
+        <PackageReference Include="AntDesign" Version="2.0.0-nightly-250108132511" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="7.0.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
         <PackageReference Include="Toolbelt.Blazor.HttpClientInterceptor" Version="10.2.0" />
         <PackageReference Remove="SonarAnalyzer.CSharp" />
         <PackageReference Include="System.Net.Http" Version="4.3.4" />

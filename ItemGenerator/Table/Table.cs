@@ -5,19 +5,13 @@ using JsonTable;
 namespace ItemGenerator.Table
 {
     [Table(@"json")]
-    public partial class TableItem : BaseDict<string, Item>
-    {
-    }
+    public partial class TableItem : BaseDict<string, Item>;
 
     [Table(@"json", "Type")]
-    public partial class TableItemByType : BaseMultiDict<ItemType, Item>
-    {
-    }
+    public partial class TableItemByType : BaseMultiDict<ItemType, Item>;
 
     [Table(@"json")]
-    public partial class TableItemDrop : BaseList<ItemDrop>
-    {
-    }
+    public partial class TableItemDrop : BaseList<ItemDrop>;
 
     [Table(@"json")]
     public partial class TableItemDropGrade : BaseList<ItemDropGrade>
@@ -52,23 +46,15 @@ namespace ItemGenerator.Table
     }
 
     [Table(@"json")]
-    public partial class TableItemEquip : BaseDict<string, ItemEquip>
-    {
-    }
+    public partial class TableItemEquip : BaseDict<string, ItemEquip>;
 
 
     [Table(@"json")]
-    public partial class TableItemWeapon : BaseDict<string, ItemWeapon>
-    {
-    }
+    public partial class TableItemWeapon : BaseDict<string, ItemWeapon>;
 
     [Table(@"json")]
-    public partial class TableItemScroll : BaseDict<string, ItemScroll>
-    {
-    }
+    public partial class TableItemScroll : BaseDict<string, ItemScroll>;
 
     [Table(@"json")]
-    public partial class TableItemPotion : BaseDict<string, ItemPotion>
-    {
-    }
+    public partial class TableItemPotion : BaseDict<string, ItemPotion>;
 }
